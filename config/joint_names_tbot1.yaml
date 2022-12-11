@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'front_left_bracket_joint', 'front_left_wheel_joint', 'front_right_bracket_joint', 'front_right_wheel_joint', 'rear_left_wheel_joint', 'robot_arm_shoulder_pan_control','robot_arm_shoulder_lift_control','robot_arm_elbow_control', 'robot_arm_wrist_control_1', 'rear_right_wheel_joint', 'robot_arm_wrist_control_2', 'robot_arm_wrist_control_3' ]

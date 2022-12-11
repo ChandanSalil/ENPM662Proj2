@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tbot1">
+  <link name ="dummy_link" >
+  <pose> 0 0 0 0 0 0 </pose>
+  </link>
+  <joint name ="dummy_to_chassis" type ="fixed" >
+   <parent link ="dummy_link"/>
+   <child link="base_link" />
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00470112097176001 3.48250745414389E-17 0.283390634243941"
+        rpy="0 0 0" />
+      <mass
+        value="38.916003295104" />
+      <inertia
+        ixx="0.87159516019174"
+        ixy="2.03333391075014E-08"
+        ixz="-0.131822106715657"
+        iyy="3.1571573869704"
+        iyz="1.38401073695375E-17"
+        izz="3.86424722067582" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_bracket_link">
+    <inertial>
+      <origin
+        xyz="0 -2.77555756156289E-17 -0.0344318554557459"
+        rpy="0 0 0" />
+      <mass
+        value="0.770571905709279" />
+      <inertia
+        ixx="0.00308780850637333"
+        ixy="-2.92669505384426E-05"
+        ixz="4.07290275525239E-19"
+        iyy="0.00381855792350546"
+        iyz="-1.36497132851226E-19"
+        izz="0.00263318272170029" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/front_left_bracket_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/front_left_bracket_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_bracket_joint"
+    type="continuous">
+    <origin
+      xyz="0.254 0.1524 0.23368"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_bracket_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="front_left_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.00152227139554645 -0.0380695769584889 4.44089209850063E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.85458900144731" />
+      <inertia
+        ixx="0.00646670962598976"
+        ixy="-0.000186219689623283"
+        ixz="1.11772780271228E-17"
+        iyy="0.0111163204377482"
+        iyz="9.35954863103746E-19"
+        izz="0.00645926334133285" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/front_left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/front_left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.00152227139554639 0.0380695769584889 -0.121920000000001"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_bracket_link" />
+    <child
+      link="front_left_wheel_link" />
+    <axis
+      xyz="0.039954629804368 -0.999201494973459 0" />
+  </joint>
+  <link
+    name="front_right_bracket_link">
+    <inertial>
+      <origin
+        xyz="0 2.77555756156289E-17 -0.0344318554557459"
+        rpy="0 0 0" />
+      <mass
+        value="0.77057190570928" />
+      <inertia
+        ixx="0.0030994922506799"
+        ixy="9.62181576145938E-05"
+        ixz="-8.15122963162062E-19"
+        iyy="0.00380687417919888"
+        iyz="-2.52269073907684E-20"
+        izz="0.00263318272170029" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/front_right_bracket_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/front_right_bracket_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_bracket_joint"
+    type="continuous">
+    <origin
+      xyz="0.254 -0.1524 0.23368"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_bracket_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="front_right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.00504505574147324 -0.0377644993686587 4.71844785465692E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.85458900144731" />
+      <inertia
+        ixx="0.00654105092900834"
+        ixy="0.00061221668528735"
+        ixz="-8.00504037798189E-18"
+        iyy="0.0110419791347296"
+        iyz="1.3768421295945E-18"
+        izz="0.00645926334133286" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/front_right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/front_right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.0050450557414734 0.037764499368659 -0.121920000000001"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_bracket_link" />
+    <child
+      link="front_right_wheel_link" />
+    <axis
+      xyz="-0.132416161193523 -0.991194209151149 0" />
+  </joint>
+  <link
+    name="rear_left_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 -0.0381000000000001 4.44089209850063E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.8545890014473" />
+      <inertia
+        ixx="0.00645926334133285"
+        ixy="3.72643169443289E-20"
+        ixz="6.62675068231541E-18"
+        iyy="0.0111237667224051"
+        iyz="1.40926714162366E-19"
+        izz="0.00645926334133285" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/rear_left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/rear_left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.254 0.1905 0.11176"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_wheel_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rear_right_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 0.0381 4.9960036108132E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.85458900144731" />
+      <inertia
+        ixx="0.00645926334133286"
+        ixy="-8.44542789064645E-20"
+        ixz="7.59062289109284E-18"
+        iyy="0.0111237667224051"
+        iyz="7.37711671531106E-20"
+        izz="0.00645926334133286" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/rear_right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tbot1/meshes/rear_right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.254 -0.1905 0.111759999999999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_wheel_link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  
+  <transmission name="rear_left_wheel_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rear_left_wheel_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_left_wheel_motor">
+      <mechanicalReduction>50</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="rear_right_wheel_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rear_right_wheel_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_right_wheel_motor">
+      <mechanicalReduction>50</mechanicalReduction>
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="front_left_bracket_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_left_bracket_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_left_bracket_motor">
+      <mechanicalReduction>50</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="front_right_bracket_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_right_bracket_joint">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_right_bracket_motor">
+      <mechanicalReduction>50</mechanicalReduction>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+</robot>
